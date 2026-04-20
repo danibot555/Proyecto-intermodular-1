@@ -43,4 +43,3 @@ Se ha utilizado el direccionamiento privado de Clase C bajo la red **192.168.0.0
 - `/docs`: Análisis detallado de necesidades y descripción de dispositivos.
 - `/img`: Capturas del diagrama de topología realizado en Cisco Packet Tracer.
 - `/packet-tracer`: Archivo fuente `.pkt` con la simulación de la red.
-[Descargar Documento](Proyecto Intermodular_ Planificación y Administración de Redes (0370).pdf)
