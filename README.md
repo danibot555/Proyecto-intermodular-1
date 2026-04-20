@@ -1,0 +1,45 @@
+# Planificación y Administración de Redes - Proyecto Intermodular
+
+Este repositorio contiene la documentación técnica y el diseño de la infraestructura de red para un sistema informático de un **entorno hotelero**. El proyecto ha sido desarrollado para el módulo de **Planificación y Administración de Redes (0370)** en el primer año de **ASIR**.
+
+## Descripción del Proyecto
+El objetivo es diseñar una red sólida, escalable y segura que separe la operativa administrativa del hotel (recepción, gestión de reservas y servidores) del acceso a internet proporcionado a los huéspedes.
+
+##  Arquitectura y Topología de Red
+La red utiliza una **topología en estrella extendida** segmentada mediante **VLANs** para garantizar la seguridad y reducir los dominios de difusión.
+
+### Componentes de la infraestructura:
+- **Router (Router1 - Cisco 2911):** Puerta de enlace perdeterminada (Gateway) y conexión al ISP (Internet).
+- **Core Switch (Multilayer Switch 3650):** Switch central de capa 3 que gestiona el tráfico entre las diferentes zonas.
+- **Switches de Acceso (Cisco 2960):** Conectan directamente los equipos finales de cada zona.
+- **Cableado:** Se ha utilizado exclusivamente **cable de cobre de par trenzado (Straight-Through)** para todas las conexiones cableadas.
+
+### Segmentación (VLANs):
+1.  **VLAN 10 (Administración):** Color Naranja en el diagrama. Contiene los servidores críticos y los PCs de gestión.
+2.  **VLAN 20 (Huéspedes):** Color Verde en el diagrama. Red aislada para los clientes del hotel.
+
+## Plan de Direccionamiento IP
+Se ha utilizado el direccionamiento privado de Clase C bajo la red **192.168.0.0/16**.
+
+| Dispositivo | Dirección IP | VLAN | Función |
+| :--- | :--- | :--- | :--- |
+| **Router1 (GW)** | 192.168.10.1 | - | Gateway Principal |
+| **Server PMS/DB** | 192.168.10.10 | 10 | Base de datos Hotel |
+| **Servidor NAS** | 192.168.10.20 | 10 | Almacenamiento/Backups |
+| **PC8 (Recepción)** | 192.168.10.101 | 10 | Terminal de Trabajo |
+| **PC9 (Oficina)** | 192.168.10.102 | 10 | Terminal de Trabajo |
+| **PC10 (Dirección)**| 192.168.10.103 | 10 | Terminal de Trabajo |
+| **PC11 (Huésped 1)**| 192.168.20.101 | 20 | Conexión Cliente |
+| **PC12 (Huésped 2)**| 192.168.20.102 | 20 | Conexión Cliente |
+| **PC13 (Huésped 3)**| 192.168.20.103 | 20 | Conexión Cliente |
+
+## Servicios de Red Implementados
+- **Enrutamiento Inter-VLAN:** Configurado en el Switch Core para permitir comunicación controlada.
+- **Servicio DHCP:** Configurado para asignar automáticamente parámetros de red a los PCs de los huéspedes.
+- **DNS:** Resolución de nombres para acceso a servicios internos y navegación externa.
+- **Seguridad (Firewall):** Control de tráfico mediante listas de acceso en el router para evitar que los huéspedes accedan a la VLAN de administración.
+
+## Contenido del Repositorio
+- `/docs`: Análisis detallado de necesidades y descripción de dispositivos.
+- `/img`: Capturas del diagrama de topología realizado en Cisco Packet Tracer.
+- `/packet-tracer`: Archivo fuente `.pkt` con la simulación de la red.
