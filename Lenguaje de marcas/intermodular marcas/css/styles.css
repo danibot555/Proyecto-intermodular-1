@@ -1,0 +1,199 @@
+/* Variables de marca estilo "Resort de Playa" */
+:root {
+    --ocean-blue: #028090;      /* Azul mar profundo para cabeceras */
+    --aqua-light: #00bfb2;      /* Turquesa agua cristalina para acentos */
+    --sand-bg: #fdfbf7;         /* Color arena muy clarito para el fondo de la web */
+    --sunset-coral: #f4a261;    /* Naranja atardecer para botones y llamadas a la acción */
+    --sunset-hover: #e76f51;    /* Coral más oscuro para cuando pasas el ratón */
+    --text-main: #264653;       /* Azul muy oscuro para el texto, más suave que el negro puro */
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--sand-bg);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* Identificador: Header Principal con degradado marino */
+#main-header {
+    background: linear-gradient(135deg, var(--ocean-blue), var(--aqua-light));
+    padding: 15px 0;
+    color: var(--white);
+    box-shadow: 0 4px 12px rgba(0, 191, 178, 0.2);
+}
+
+#navbar {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+#logo {
+    font-size: 1.5em;
+    letter-spacing: 1px;
+}
+
+#nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 8px 16px;
+    border-radius: 20px; /* Botones de menú redondeados */
+    transition: background-color 0.3s ease;
+}
+
+#nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Sección Hero / Banner */
+#hero {
+    background-color: var(--ocean-blue);
+    color: var(--white);
+    padding: 60px 20px 100px 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Caja de búsqueda (si la usas) */
+#search-bar {
+    background-color: var(--white);
+    padding: 10px;
+    border-radius: 50px;
+    display: flex;
+    gap: 10px;
+    margin-top: -40px;
+    box-shadow: 0 10px 25px rgba(2, 128, 144, 0.15);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.search-input {
+    background: transparent;
+    padding: 12px 20px;
+    border: 1px solid #e0e0e0;
+    flex: 1;
+    border-radius: 30px;
+    font-family: inherit;
+}
+
+/* Catálogo de Habitaciones */
+#room-list h2 {
+    text-align: center;
+    color: var(--ocean-blue);
+    font-size: 2.2em;
+    margin-bottom: 40px;
+}
+
+#room-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.room-card {
+    background-color: var(--white);
+    border: none;
+    border-radius: 16px; /* Bordes muy suaves */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.room-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(2, 128, 144, 0.15);
+}
+
+.room-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 3px solid var(--aqua-light);
+}
+
+.room-info {
+    padding: 24px;
+}
+
+.room-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--ocean-blue);
+    margin: 0 0 12px 0;
+}
+
+.room-badge {
+    background-color: var(--aqua-light);
+    color: var(--white);
+    font-size: 12px;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+.price-box {
+    text-align: right;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px dashed #eee;
+}
+
+.price-label { 
+    font-size: 13px; 
+    color: #777; 
+}
+
+.price-value { 
+    font-size: 26px; 
+    font-weight: bold; 
+    color: var(--ocean-blue);
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Botones (estilo cálido atardecer) */
+.btn-primary {
+    background-color: var(--sunset-coral);
+    color: var(--white);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 30px; /* Botón en forma de píldora */
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+    width: 100%; /* El botón ocupa todo el ancho en la tarjeta */
+}
+
+.btn-primary:hover { 
+    background-color: var(--sunset-hover); 
+}
+
+/* Pie de página */
+#footer-simple {
+    background-color: var(--text-main);
+    color: var(--white);
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 80px;
+    border-top: 5px solid var(--aqua-light);
+}

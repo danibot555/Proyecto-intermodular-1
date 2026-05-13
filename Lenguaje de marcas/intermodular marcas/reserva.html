@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservar | Hotel Horizonte</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <style>
+        /* Unos pequeños ajustes extra para que los checkboxes se vean bien */
+        .checkbox-group { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+        .checkbox-group input { width: auto; margin: 0; }
+        select { padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-family: inherit; }
+        fieldset { border: 1px solid #ccc; border-radius: 5px; padding: 15px; margin-top: 10px; background: #f9f9f9; }
+        legend { font-weight: bold; color: #2c3e50; }
+    </style>
+</head>
+<body>
+
+    <header id="main-header">
+    <nav id="navbar">
+        <div id="logo">Hotel Horizonte</div>
+        <div id="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="habitaciones.html">Habitaciones</a>
+            <a href="reserva.html">Reservar</a>
+            <a href="contacto.html">Contacto</a>
+        </div>
+    </nav>
+</header>
+
+    <section>
+        <h2>Reserva tu Habitación</h2>
+        <p>Rellena los siguientes datos para formalizar tu estancia. <em>(Simulación de generación de XML de reservas)</em>.</p>
+        
+        <form action="#" method="POST">
+            <label for="nombre">Nombre y Apellidos:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="dni">DNI / Pasaporte:</label>
+            <input type="text" id="dni" name="dni" placeholder="Ej: 12345678A" required pattern="\d{8}[A-Za-z]">
+
+            <label for="fecha_entrada">Fecha de Entrada:</label>
+            <input type="date" id="fecha_entrada" name="fecha_entrada" required>
+
+            <label for="fecha_salida">Fecha de Salida:</label>
+            <input type="date" id="fecha_salida" name="fecha_salida" required>
+
+            <label for="tipo_habitacion">Tipo de Habitación:</label>
+            <select id="tipo_habitacion" name="tipo_habitacion" required>
+                <option value="simple">Habitación Simple</option>
+                <option value="doble">Habitación Doble</option>
+                <option value="deluxe">Suite Deluxe</option>
+            </select>
+
+            <fieldset>
+                <legend>Cargos Extra Opcionales</legend>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="extra_desayuno" name="extras" value="desayuno">
+                    <label for="extra_desayuno">Desayuno Buffet (+15€/noche)</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="extra_spa" name="extras" value="spa">
+                    <label for="extra_spa">Acceso VIP al Spa (+30€)</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="extra_cama" name="extras" value="cama_supletoria">
+                    <label for="extra_cama">Cama Supletoria (+25€/noche)</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="extra_mascota" name="extras" value="mascota">
+                    <label for="extra_mascota">Pet Friendly - Mascota (+20€)</label>
+                </div>
+            </fieldset>
+
+            <button type="submit" style="margin-top: 15px;">Confirmar Reserva</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Hotel Horizonte - Proyecto Intermodular. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

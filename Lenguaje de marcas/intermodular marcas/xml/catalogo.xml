@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalogo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="esquema.xsd">
+    <habitaciones>
+        <habitacion id="HAB-001">
+            <tipo>simple</tipo>
+            <descripcion>Perfecta para viajeros solitarios. Cama individual, WiFi de alta velocidad y escritorio.</descripcion>
+            <precio_noche>50.00</precio_noche>
+            <capacidad_maxima>1</capacidad_maxima>
+        </habitacion>
+        <habitacion id="HAB-002">
+            <tipo>doble</tipo>
+            <descripcion>Ideal para parejas. Cama King Size, balcón privado y baño completo con bañera.</descripcion>
+            <precio_noche>90.00</precio_noche>
+            <capacidad_maxima>2</capacidad_maxima>
+        </habitacion>
+        <habitacion id="HAB-003">
+            <tipo>deluxe</tipo>
+            <descripcion>El máximo lujo. Sala de estar separada, jacuzzi privado y vistas panorámicas al mar.</descripcion>
+            <precio_noche>150.00</precio_noche>
+            <capacidad_maxima>4</capacidad_maxima>
+        </habitacion>
+    </habitaciones>
+    
+    <cargos_extra>
+        <extra id="EXT-001">
+            <nombre>Desayuno Buffet</nombre>
+            <precio>15.00</precio>
+            <cobro>por_persona_noche</cobro>
+        </extra>
+        <extra id="EXT-002">
+            <nombre>Acceso VIP al Spa</nombre>
+            <precio>30.00</precio>
+            <cobro>estancia_completa</cobro>
+        </extra>
+        <extra id="EXT-003">
+            <nombre>Cama Supletoria</nombre>
+            <precio>25.00</precio>
+            <cobro>por_noche</cobro>
+        </extra>
+        <extra id="EXT-004">
+            <nombre>Pet Friendly (Mascotas)</nombre>
+            <precio>20.00</precio>
+            <cobro>tarifa_unica</cobro>
+        </extra>
+    </cargos_extra>
+</catalogo>

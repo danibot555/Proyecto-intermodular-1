@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="catalogo">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="habitaciones" type="tipoHabitaciones"/>
+                <xs:element name="cargos_extra" type="tipoCargosExtra"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="tipoHabitaciones">
+        <xs:sequence>
+            <xs:element name="habitacion" type="tipoHabitacion" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="tipoHabitacion">
+        <xs:sequence>
+            <xs:element name="tipo">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="simple"/>
+                        <xs:enumeration value="doble"/>
+                        <xs:enumeration value="deluxe"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="descripcion" type="xs:string"/>
+            <xs:element name="precio_noche">
+                <xs:simpleType>
+                    <xs:restriction base="xs:decimal">
+                        <xs:minExclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="capacidad_maxima">
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:minInclusive value="1"/>
+                        <xs:maxInclusive value="10"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="id" use="required">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:pattern value="HAB-\d{3}"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:complexType>
+
+    <xs:complexType name="tipoCargosExtra">
+        <xs:sequence>
+            <xs:element name="extra" type="tipoExtra" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="tipoExtra">
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="precio" type="xs:decimal"/>
+            <xs:element name="cobro">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="por_persona_noche"/>
+                        <xs:enumeration value="estancia_completa"/>
+                        <xs:enumeration value="por_noche"/>
+                        <xs:enumeration value="tarifa_unica"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="id" use="required">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:pattern value="EXT-\d{3}"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:complexType>
+
+</xs:schema>
