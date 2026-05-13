@@ -1,4 +1,4 @@
-# 🏨 Proyecto Intermodular - Hotel Horizonte
+# Proyecto Intermodular - Hotel Horizonte
 
 **Ciclo Formativo:** 1º ASIR (Administración de Sistemas Informáticos en Red)  
 **Módulo:** Lenguajes de Marcas y Sistemas de Gestión de Información  
@@ -7,12 +7,12 @@
 
 ---
 
-## 📖 Descripción del Proyecto
+##  Descripción del Proyecto
 **Hotel Horizonte** es un proyecto integral que simula el entorno digital de un resort de playa ubicado en Málaga. El proyecto articula una interfaz web visual e intuitiva orientada al cliente final (Frontend) con una arquitectura de exportación y estandarización de datos orientada a la administración del sistema (Backend/Estructuración de datos).
 
 ---
 
-## 📂 Estructura del Repositorio
+## Estructura del Repositorio
 
 ```text
 /
