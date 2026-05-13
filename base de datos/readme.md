@@ -1,10 +1,10 @@
-# 🗄️ Sistema de Gestión de Bases de Datos - PMS Hotel
+# Sistema de Gestión de Bases de Datos - PMS Hotel
 
 Este repositorio contiene el diseño, implementación y administración de la base de datos centralizada para el Proyecto Intermodular de 1º de ASIR. El sistema ha sido desarrollado bajo el motor **PostgreSQL** y gestionado mediante **pgAdmin4**, diseñado para soportar la operativa completa de un complejo hotelero.
 
 ---
 
-## 📋 Análisis del Sistema de Información
+##  Análisis del Sistema de Información
 
 La base de datos está diseñada para gestionar el ciclo de vida completo de una reserva y la trazabilidad de los servicios consumidos. Se ha priorizado la integridad referencial y la normalización para evitar redundancias.
 
@@ -17,7 +17,7 @@ La base de datos está diseñada para gestionar el ciclo de vida completo de una
 
 ---
 
-## 📐 Diseño Relacional (E-R)
+##  Diseño Relacional (E-R)
 
 El diseño sigue la **Tercera Forma Normal (3FN)**. A continuación se detalla la lógica de las relaciones:
 
@@ -28,7 +28,7 @@ El diseño sigue la **Tercera Forma Normal (3FN)**. A continuación se detalla l
 
 ---
 
-## 🛠️ Especificaciones Técnicas (PostgreSQL)
+##  Especificaciones Técnicas (PostgreSQL)
 
 Se han utilizado características avanzadas de PostgreSQL para optimizar el rendimiento y la validación de datos:
 
@@ -38,7 +38,7 @@ Se han utilizado características avanzadas de PostgreSQL para optimizar el rend
 
 ---
 
-## 🚀 Implementación y Despliegue
+## Implementación y Despliegue
 
 Para replicar la base de datos en un entorno local o en una instancia de **AWS RDS**:
 
@@ -48,7 +48,7 @@ Para replicar la base de datos en un entorno local o en una instancia de **AWS R
 
 ---
 
-## 🛡️ Administración de la BBDD (Perfil ASIR)
+## Administración de la BBDD (Perfil ASIR)
 
 Como parte de las tareas de administración de sistemas, se incluyen procedimientos para:
 
@@ -66,14 +66,9 @@ Como parte de las tareas de administración de sistemas, se incluyen procedimien
 
 ---
 
-## 📂 Contenido del Repositorio
+## Contenido del Repositorio
 
 * `/sql/01_schema.sql`: Script DDL (Data Definition Language).
 * `/sql/02_data_seed.sql`: Script DML (Data Manipulation Language).
 * `/sql/03_queries.sql`: Consultas de ejemplo (SELECT, JOIN, AGGREGATIONS).
 * `/docs/ER_Diagram.png`: Diagrama Entidad-Relación detallado.
-
----
-**Autor:** [Tu Nombre]  
-**Módulo:** Gestión de Bases de Datos - 1º ASIR  
-**Año:** 2026
